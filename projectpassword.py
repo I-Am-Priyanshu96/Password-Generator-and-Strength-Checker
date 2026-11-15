@@ -55,3 +55,14 @@ def check_strength(password):
         return "Medium", score
     else:
         return "Weak", score
+
+# Safe Input Handling
+def safe_int_input(prompt):
+    while True:
+        try:
+            val = int(input(prompt))
+            if val > 0:
+                return val
+            print("Please enter a number greater than 0.")
+        except ValueError:
+            print("Invalid input! Enter a valid integer.")
