@@ -39,3 +39,19 @@ def check_strength(password):
             types_found.add("digit")
         elif char in CHAR_GROUPS[2]:
             types_found.add("symbol")
+
+    if len(password) >= 12:
+        score += 3
+    elif len(password) >= 8:
+        score += 2
+    else:
+        score += 1
+
+    score += len(types_found)
+
+    if score >= 5:
+        return "Strong", score
+    elif score >= 3:
+        return "Medium", score
+    else:
+        return "Weak", score
