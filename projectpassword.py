@@ -66,3 +66,12 @@ def safe_int_input(prompt):
             print("Please enter a number greater than 0.")
         except ValueError:
             print("Invalid input! Enter a valid integer.")
+
+def safe_bool_input(prompt):
+    while True:
+        choice = input(prompt).strip().lower()
+        if choice in ['y', 'yes']:
+            return True
+        if choice in ['n', 'no']:
+            return False
+        print("Invalid input! Enter 'y' or 'n'.")
