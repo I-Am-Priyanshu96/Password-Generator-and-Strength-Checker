@@ -99,3 +99,12 @@ def main():
             use_digits = safe_bool_input("Include digits? (y/n): ")
             use_symbols = safe_bool_input("Include symbols? (y/n): ")
             count = safe_int_input("How many passwords to generate?: ")
+
+            # Build allowed characters
+            allowed = CHAR_GROUPS[0]
+            if use_digits:
+                allowed += CHAR_GROUPS[1]
+            if use_symbols:
+                allowed += CHAR_GROUPS[2]
+
+
