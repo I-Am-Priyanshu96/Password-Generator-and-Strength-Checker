@@ -106,5 +106,26 @@ def main():
                 allowed += CHAR_GROUPS[1]
             if use_symbols:
                 allowed += CHAR_GROUPS[2]
+                
+            # Generate multiple passwords using recursion
+            passwords = [generate_password_recursive(length, allowed) for _ in range(count)]
+
+            print("\nGenerated Passwords:")
+            for idx, pwd in enumerate(passwords, start=1):
+                strength, score = check_strength(pwd)
+                print(f"{idx}. {pwd} (Strength: {strength}, Score: {score})")
+
+            if safe_bool_input("\nSave one of these passwords? (y/n): "):
+                while True:
+                    sel = safe_int_input(f"Select password number (1-{count}): ")
+                    if 1 <= sel <= count:
+                        chosen = passwords[sel - 1]
+                        break
+                    print("Number out of range.")
+
+                site = input("Enter site name: ").strip()
+                if site:
+                    save_password(site, chosen)
+
 
 
