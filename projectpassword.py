@@ -75,3 +75,13 @@ def safe_bool_input(prompt):
         if choice in ['n', 'no']:
             return False
         print("Invalid input! Enter 'y' or 'n'.")
+
+# File Handling & Dictionary Update
+def save_password(site, password):
+    saved_passwords[site] = password  # Update dictionary
+    try:
+        with open("passwords.txt", "a") as file:
+            file.write(f"Site: {site} | Password: {password}\n")
+        print(f"Saved password for {site} successfully!")
+    except IOError as e:
+        print(f"File error: {e}")
