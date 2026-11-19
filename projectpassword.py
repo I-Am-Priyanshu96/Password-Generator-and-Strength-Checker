@@ -94,3 +94,8 @@ def main():
         print("3. View Saved Passwords")
         print("4. Exit\n")
         
+        if choice == "1":
+            length = safe_int_input("Enter password length: ")
+            use_digits = safe_bool_input("Include digits? (y/n): ")
+            use_symbols = safe_bool_input("Include symbols? (y/n): ")
+            count = safe_int_input("How many passwords to generate?: ")
