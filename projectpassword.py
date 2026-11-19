@@ -85,3 +85,12 @@ def save_password(site, password):
         print(f"Saved password for {site} successfully!")
     except IOError as e:
         print(f"File error: {e}")
+
+def main():
+    while True:
+        print("\n--- Password Generator & Checker ---")
+        print("1. Generate Passwords")
+        print("2. Check Password Strength")
+        print("3. View Saved Passwords")
+        print("4. Exit\n")
+        
