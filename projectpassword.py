@@ -139,5 +139,11 @@ def main():
                 print(f"{site}: {pwd}")
             print()
 
+        elif choice == "4":
+            print("Goodbye!")
+            break
+        else:
+            print("Invalid choice!\n")
+
 
 
