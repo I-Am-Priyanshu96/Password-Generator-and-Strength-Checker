@@ -71,7 +71,3 @@ Generated Passwords:
 This project is intended for **educational and portfolio purposes**. Passwords are saved in plain text inside `passwords.txt` and generated using Python's standard `random` module rather than the cryptographically secure `secrets` module. Do not use this tool to store sensitive real-world account credentials.
 
 ---
-
-## 📄 License
-
-This project is open-source and available under the [MIT License](LICENSE).
