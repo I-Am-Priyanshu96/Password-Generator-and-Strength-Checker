@@ -145,6 +145,11 @@ def main():
         else:
             print("Invalid choice!\n")
 
+if __name__ == "__main__":
+    import doctest
+    doctest.testmod()  # Run doctests
+    main()
+
 
 
 
