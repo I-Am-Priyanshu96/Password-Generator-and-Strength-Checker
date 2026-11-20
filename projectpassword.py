@@ -126,10 +126,17 @@ def main():
                 site = input("Enter site name: ").strip()
                 if site:
                     save_password(site, chosen)
+                    
         elif choice == "2":
             pwd = input("Enter password to rate: ")
             strength, score = check_strength(pwd)
             print(f"Strength: {strength} (Score: {score})")
+            print()
+
+        elif choice == "3":
+            print("\nSaved Passwords :")
+            for site, pwd in saved_passwords.items():
+                print(f"{site}: {pwd}")
             print()
 
 
