@@ -93,7 +93,7 @@ def main():
         print("2. Check Password Strength")
         print("3. View Saved Passwords")
         print("4. Exit\n")
-        
+        choice = input("Enter Your Choice (1-4): ").strip()
         if choice == "1":
             length = safe_int_input("Enter password length: ")
             use_digits = safe_bool_input("Include digits? (y/n): ")
