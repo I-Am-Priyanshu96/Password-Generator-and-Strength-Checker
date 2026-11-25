@@ -14,16 +14,6 @@ def generate_password_recursive(length, chars):
     return random.choice(chars) + generate_password_recursive(length - 1, chars)
 
 
-# Topic: Nested Loops (outer loop over passwords, inner loop builds characters)
-def generate_batch_nested(count, length, chars):
-    passwords = []
-    for _ in range(count):  # Outer loop over passwords
-        pwd = ""
-        for _ in range(length):  # Inner loop over characters
-            pwd += random.choice(chars)
-        passwords.append(pwd)
-    return passwords
-
 def check_strength(password):
     """
     >>> check_strength("abc")[0]
